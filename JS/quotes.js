@@ -43,7 +43,7 @@ const quotes = [ //객체 형태로 배열 저장
 
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
-const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];  //랜덤으로 출력
-
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)]; //랜덤으로 출력
+//Math.floor = 반올림
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
