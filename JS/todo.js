@@ -13,8 +13,9 @@ function saveToDos() {
 
 function deleteToDo(event) {
     const li = event.target.parentElement; //event가 일어난 element의 parentElement 선택
-    console.log(li.id);
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id)); //toDo의 id값과 li의 아이디 값 필터링!
+    saveToDos();
 }
 
 function paintToDo(newTodo) { //handleToDoSubmit에서 newTodo를 받아서 리스트에 추가
